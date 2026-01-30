@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Juego del Calamar - Reglas de Cartas</title>
+    <meta name="description" content="El Juego del Calamar: descubre los efectos secretos de cada carta y conviértete en el ganador con la corona">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="felt-background">
+        <div class="container">
+            <header>
+                <h1>🦑 El Juego del Calamar 🦑</h1>
+                <p class="subtitle">Selecciona tu carta para ver su desencadenante y efecto secreto</p>
+            </header>
+
+            <section class="rules-section">
+                <h2>📜 Reglas del Juego</h2>
+                <div class="rules-grid">
+                    <div class="rule">
+                        <span class="rule-icon">🃏</span>
+                        <p>Cada jugador coge una carta secreta</p>
+                    </div>
+                    <div class="rule">
+                        <span class="rule-icon">🔍</span>
+                        <p>Busca en esta página el efecto que hace</p>
+                    </div>
+                    <div class="rule">
+                        <span class="rule-icon">🎯</span>
+                        <p>El objetivo es tener el máximo de cartas posibles.</p>
+                    </div>
+                    <div class="rule">
+                        <span class="rule-icon">�</span>
+                        <p>Para conseguir más cartas tienes que delatar al resto de jugadores diciendo su carta concreta, si aciertas te la quedas.</p>
+                    </div>
+                    <div class="rule">
+                        <span class="rule-icon">❌</span>
+                        <p>Si delatas a alguien y fallas pierdes tu carta y se la das.</p>
+                    </div>
+                    <div class="rule">
+                        <span class="rule-icon">👑</span>
+                        <p>El ganador / ganadora se lleva una fantástica corona</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card-selector">
+                <h2>Buscar Carta</h2>
+                
+                <div class="selector-container">
+                    <div class="suit-selector">
+                        <h3>Selecciona el Palo</h3>
+                        <div class="suit-buttons">
+                            <button class="suit-btn hearts" data-suit="♥️" title="Emoción / Opinión">
+                                <span class="suit-symbol">♥️</span>
+                                <span class="suit-label">Emoción</span>
+                            </button>
+                            <button class="suit-btn spades" data-suit="♠️" title="Dinámica social">
+                                <span class="suit-symbol">♠️</span>
+                                <span class="suit-label">Social</span>
+                            </button>
+                            <button class="suit-btn diamonds" data-suit="♦️" title="Objetos o acciones físicas">
+                                <span class="suit-symbol">♦️</span>
+                                <span class="suit-label">Físicas</span>
+                            </button>
+                            <button class="suit-btn clubs" data-suit="♣️" title="Lenguaje">
+                                <span class="suit-symbol">♣️</span>
+                                <span class="suit-label">Lenguaje</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="rank-selector">
+                        <h3>Selecciona el Número</h3>
+                        <div class="rank-buttons">
+                            <button class="rank-btn" data-rank="A">A</button>
+                            <button class="rank-btn" data-rank="2">2</button>
+                            <button class="rank-btn" data-rank="3">3</button>
+                            <button class="rank-btn" data-rank="4">4</button>
+                            <button class="rank-btn" data-rank="5">5</button>
+                            <button class="rank-btn" data-rank="6">6</button>
+                            <button class="rank-btn" data-rank="7">7</button>
+                            <button class="rank-btn" data-rank="8">8</button>
+                            <button class="rank-btn" data-rank="9">9</button>
+                            <button class="rank-btn" data-rank="10">10</button>
+                            <button class="rank-btn" data-rank="J">J</button>
+                            <button class="rank-btn" data-rank="Q">Q</button>
+                            <button class="rank-btn" data-rank="K">K</button>
+                        </div>
+                    </div>
+
+                    <div class="joker-selector">
+                        <h3>Carta Especial</h3>
+                        <button class="joker-btn" data-rank="Joker">
+                            <span class="joker-icon">🃏</span>
+                            <span class="joker-label">JOKER</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card-display">
+                <div id="filterInfo" class="filter-info">
+                    Mostrando: <span id="filterText">Todas las cartas</span>
+                </div>
+                <div id="cardsGrid" class="cards-grid">
+                    <!-- Cards will be dynamically generated here -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
